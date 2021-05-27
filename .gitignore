@@ -1,0 +1,6 @@
+.terraform
+tmp
+*.tfstate*
+
+packer/variables.json
+packer/*.pem
