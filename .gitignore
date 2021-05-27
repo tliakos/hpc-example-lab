@@ -1,6 +1,7 @@
 .terraform
 tmp
 *.tfstate*
+.terraform*.hcl
 
 packer/variables.json
 packer/*.pem
