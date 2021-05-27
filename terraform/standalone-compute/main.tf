@@ -25,9 +25,9 @@ data "terraform_remote_state" "storage" {
   }
 }
 
-resource "google_compute_instance" "eda-n2" {
+resource "google_compute_instance" "standalone-n2" {
   count        = 1
-  name         = "eda-n2-${count.index}"
+  name         = "standalone-n2-${count.index}"
   machine_type = "n2-standard-2"
   zone         = var.zone
 
@@ -63,9 +63,9 @@ resource "google_compute_instance" "eda-n2" {
 
 }
 
-resource "google_compute_instance" "eda-n2d" {
+resource "google_compute_instance" "standalone-n2d" {
   count        = 1
-  name         = "eda-n2d-${count.index}"
+  name         = "standalone-n2d-${count.index}"
   machine_type = "n2d-highmem-2"
   zone         = var.zone
 
@@ -101,9 +101,9 @@ resource "google_compute_instance" "eda-n2d" {
 
 }
 
-resource "google_compute_instance" "eda-c2" {
+resource "google_compute_instance" "standalone-c2" {
   count        = 1
-  name         = "eda-c2-${count.index}"
+  name         = "standalone-c2-${count.index}"
   machine_type = "c2-standard-4"
   zone         = var.zone
 
